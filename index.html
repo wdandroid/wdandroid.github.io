@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+     <style type="text/css">
+
+         [href^="http"]{
+             background-color:yellow; font-family: '黑体'; font-size: 20px;
+         }
+          [href="http://192.168.2.100:8080/05/#"]{
+              background-color:white;
+           }
+
+     </style>
+
+     <script type="text/javascript">
+
+
+        var  namelist5=[    "",  '谢文','马加旺',             "", "", "",  '钱金谷',"",                             "",""];
+        var  namelist4=[    "" , '张松 ',"",                    '冯烽 ','杜喆 ','李健','李林通',              '张理 ','宁骏 ',"" ];
+        var  namelist3=[    "" ,  '邵铭海','邢峰',               '张腾','尹莉 ','陈翔 ','王力 ',            '王云龙','曾天航',""];
+        var  namelist2=[  '李文博','王聪 ',  '王建华',          '黄佳睿','胡想成','王晨','刘瑶 ',          '杜鹏程' ,'王怡' ,""];
+        var  namelist1=[    '惠佳乐','张致远',  '光晓磊',        '袁振','张婷' ,'宋涛' ,'李鹏飞',               '钦鹏' ,'李卓鹏','黄百合'];
+
+
+        var  namelist_url5=[    "",  '#','#',                  "", "", "",  '#',"",              "",""];
+        var  namelist_url4=[    "" , '#',"",                    '#','#','#','#',              '#','#',"" ];
+        var  namelist_url3=[    "" ,  '#','xf',               '#','#','#','#',                '#','#',""];
+        var  namelist_url2=[  '#','#',  '#',                  '#','#','#','#',                '#' ,'#' ,""];
+        var  namelist_url1=[    '#','zzy',  'gxl',                'yz','zt' ,'st' ,'lpf',             'qp' ,'#','#'];
+         var names=[namelist5,namelist4,namelist3,namelist2,namelist1]
+         var urls=[namelist_url5,namelist_url4,namelist_url3,namelist_url2,namelist_url1];
+         function init(){
+
+               var tablenode=   document.getElementById("classroom");
+
+            // alert(tablenode)
+
+             for(var i=0;i<names.length;i++ ){
+
+                 var trNode=    tablenode.insertRow(tablenode.rows.length);
+
+                 for(var j=0;j<names[i].length;j++){
+
+                     var tdNode =trNode.insertCell(j);
+                     if( names[i][j]!="")
+                          tdNode.innerHTML="<a href=\"http://192.168.2.100:8080/05/"+urls[i][j] +"\"     target=\"_blank\"> " +names[i][j]+"</a> ";
+
+                 }
+
+
+             }
+
+
+
+
+          }
+
+     </script>
+ </head>
+ <body onload="init()">
+  <div style="text-align: center;font-size: 2cm;">王道JAVA 5期</div>
+  <br>
+
+      <table id="classroom"    border="1" width="1000" height="500" align="center" bordercolor="red" cellspacing="10"  style="text-align: center" >
+      </table>
+
+
+  
+ </body>
+</html>
